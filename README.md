@@ -67,7 +67,7 @@ Clean Architecture is employed to create a separation of concerns, making the ap
     *   Implements the repository interfaces defined in the domain layer.
     *   Responsible for fetching data from various sources (network, local database).
     *   Contains repository implementations, and data mapping logic (DTOs to domain models).
-    *   Depends on libraries like Retrofit, Room.
+    *   Depends on libraries like Retrofit.
     *   **Example:** `EmployeeRepositoryImpl`, `ApiService`, `EmployeeListMapper`.
 
 *   **Presentation Layer (UI Layer):**
@@ -99,7 +99,7 @@ The MVI pattern is used within the presentation layer to manage UI state and use
     *   Listens to Intents from the View.
     *   Processes these Intents by interacting with Use Cases from the domain layer.
     *   Updates the Model (State) based on the results.
-    *   May also emit one-time side effects (Effects/SingleLiveEvent) for actions like navigation or showing a Toast.
+    *   Emit one-time side effects (Effects/SingleLiveEvent) for actions like navigation or showing a Toast.
     *   **Example:** `EmployeeListViewModel` handling `LoadEmployees` event, calling `EmployeeListUseCase`, and updating the `State`.
 
 **Unidirectional Data Flow:**
