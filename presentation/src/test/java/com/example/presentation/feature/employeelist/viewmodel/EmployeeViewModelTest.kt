@@ -44,15 +44,14 @@ class EmployeeViewModelTest : FeatureSpec({
                 val states = mutableListOf<EmployeeListContract.EmployeeListState>()
 
                 val collectJob = launch(UnconfinedTestDispatcher(testScheduler)) {
-                    viewModel.state.take(2).toList(states)
+                    viewModel.state.toList(states)
                 }
                 viewModel.event(EmployeeListContract.EmployeeListEvent.LoadEmployeeList)
                 testScheduler.advanceUntilIdle()
                 collectJob.cancel()
                 states shouldBe listOf(
-                    EmployeeListContract.EmployeeListState.Success(employeeList),
-                    EmployeeListContract.EmployeeListState.Loading
-
+                    EmployeeListContract.EmployeeListState.Loading,
+                    EmployeeListContract.EmployeeListState.Success(employeeList)
                 )
             }
         }

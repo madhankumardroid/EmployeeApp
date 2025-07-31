@@ -30,9 +30,6 @@ class EmployeeViewModel @Inject constructor(
     override val effect: SharedFlow<EmployeeListContract.EmployeeListEffect>
         get() = _mutableSharedFlow.asSharedFlow()
 
-    init {
-        loadEmployees()
-    }
     override fun event(event: EmployeeListContract.EmployeeListEvent) {
         when (event) {
             is EmployeeListContract.EmployeeListEvent.LoadEmployeeList -> {

@@ -102,6 +102,9 @@ class MainActivity : ComponentActivity() {
                     )
                 }) { innerPadding ->
                     val viewModel: EmployeeViewModel = hiltViewModel()
+                    LaunchedEffect(Unit) {
+                        viewModel.event(EmployeeListContract.EmployeeListEvent.LoadEmployeeList)
+                    }
                     NavHost(
                         navController = navController,
                         startDestination = NavDestinations.EMPLOYEE_LIST,
