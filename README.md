@@ -99,7 +99,7 @@ The MVI pattern is used within the presentation layer to manage UI state and use
     *   Listens to Intents from the View.
     *   Processes these Intents by interacting with Use Cases from the domain layer.
     *   Updates the Model (State) based on the results.
-    *   Emit one-time side effects (Effects/SingleLiveEvent) for actions like navigation or showing a Toast.
+    *   Emit one-time side effects for actions like navigation.
     *   **Example:** `EmployeeListViewModel` handling `LoadEmployees` event, calling `EmployeeListUseCase`, and updating the `State`.
 
 **Unidirectional Data Flow:**
@@ -131,7 +131,7 @@ Unit tests are written to verify the functionality of individual components in i
 
 *   **Data Layer:**
     *   MockK is used to mock ApiService and Mapper dependencies.
-    *   Mappers (DTO to Domain Model and vice-versa) are tested.
+    *   Mappers, network handler, and error handler are tested.
     *   Kotest's FunSpec is used to write test cases.
 
 **Location:** Unit tests are typically found in the `src/test/java` (or `src/test/kotlin`) directory of each module.
