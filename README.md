@@ -78,8 +78,6 @@ Clean Architecture is employed to create a separation of concerns, making the ap
     *   Implements the MVI pattern.
     *   **Example:** `EmployeeListViewModel`, `EmployeeListScreen` (Compose), `EmployeeDetailScreen` (Compose).
 
-*(You can add a simple diagram here if you like, showing the dependency flow: Presentation -> Domain <- Data)*
-
 **Benefits:**
 *   **Testability:** Each layer can be tested independently.
 *   **Maintainability:** Changes in one layer have minimal impact on others.
