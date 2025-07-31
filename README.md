@@ -1,6 +1,6 @@
 # Employee App
 
-A brief description of your Employee App: What does it do? Who is it for?
+An Android app to fetch employee data.
 
 ## Table of Contents
 
@@ -17,8 +17,6 @@ A brief description of your Employee App: What does it do? Who is it for?
 - [Contributing (Optional)](#contributing-optional)
 
 ## Overview
-
-*(Expand on the app's purpose here. What are its core features? e.g., view employee lists, see employee details, manage employee data (if applicable).)*
 
 This application demonstrates modern Android development practices, including a robust architecture, a reactive UI pattern, and comprehensive testing.
 
