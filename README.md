@@ -44,7 +44,6 @@ This project leverages a modern Android tech stack:
     *   **JUnit 5:** For unit testing.
     *   **MockK:** For creating mocks and verifying interactions in unit tests.
     *   **Turbine:** For testing Kotlin Flows.
-    *   **Espresso (Optional - if UI tests are included):** For UI testing.
     *   **AndroidX Test Libraries:** For core Android testing utilities.
     *   **Kotest:** For readable, Kotlin DSL based unit tests.
 *   **Build System:**
