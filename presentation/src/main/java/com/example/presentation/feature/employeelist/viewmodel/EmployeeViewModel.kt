@@ -52,6 +52,7 @@ class EmployeeViewModel @Inject constructor(
     }
 
     private fun loadEmployees() {
+        _mutableUIState.update { EmployeeListContract.EmployeeListState.Loading }
         viewModelScope.launch {
             getEmployeesUsecase().fold(
                 { updateState(EmployeeListContract.EmployeeListState.Error(it)) },

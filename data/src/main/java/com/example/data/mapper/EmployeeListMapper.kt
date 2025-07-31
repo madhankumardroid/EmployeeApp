@@ -7,7 +7,7 @@ import javax.inject.Inject
 
 class EmployeeListMapper @Inject constructor() : ResultMapper<List<EmployeeListItemDto>, List<EmployeeListItemModel>> {
     override fun map(input: List<EmployeeListItemDto>): List<EmployeeListItemModel> {
-        return input.map{it.toModel()}
+        return input.filter { it.id > 0 }.map{it.toModel()}
     }
 }
 

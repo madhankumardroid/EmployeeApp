@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.android.junit)
+
 }
 
 android {
@@ -55,4 +57,9 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
     debugImplementation(libs.ui.test.manifest)
+    implementation(libs.kotlin.reflect)
+    testImplementation(libs.bundles.unittest)
+    androidTestImplementation(libs.bundles.androidtest)
+    testImplementation(libs.turbine)
+    testImplementation(project(":domain"))
 }
